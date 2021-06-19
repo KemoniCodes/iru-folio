@@ -10,6 +10,10 @@
   float: right;
   margin-top: 1.2rem; }
 
+span {
+  font-style: oblique;
+  margin-right: 1rem; }
+
 h1 {
   font-size: 250px;
   font-family: "Helvetica Neue";
@@ -22,7 +26,7 @@ h2 {
   font-family: "Helvetica Neue";
   font-weight: 200;
   line-height: 101.4px;
-  letter-spacing: -.5%;
+  letter-spacing: -0.5%;
   text-transform: uppercase;
   color: #26190c;
   width: 1104px; }
@@ -32,7 +36,7 @@ h3 {
   font-family: "Helvetica Neue";
   font-weight: 200;
   line-height: 24px;
-  letter-spacing: -.5%;
+  letter-spacing: -0.5%;
   text-transform: uppercase;
   color: #26190c; }
 
@@ -41,7 +45,7 @@ p {
   font-family: "Helvetica Neue";
   font-weight: 100;
   line-height: 24px;
-  letter-spacing: -.5%;
+  letter-spacing: -0.5%;
   text-transform: uppercase;
   color: #26190c; }
 
@@ -50,11 +54,18 @@ li {
   font-family: "Helvetica Neue";
   font-weight: 200;
   line-height: 24px;
-  letter-spacing: -.5%;
+  letter-spacing: -0.5%;
   text-transform: uppercase;
   color: #26190c; }
 
+a {
+  color: #26190c;
+  text-decoration: none; }
+  a:hover {
+    color: #7d7fab; }
+
 .nav-link:hover {
+  cursor: pointer;
   color: #7d7fab; }
 
 nav ul {
@@ -81,7 +92,7 @@ nav ul {
   .home .color-changer {
     position: fixed;
     margin-right: 1rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     bottom: 0;
     right: 0; }
   .home hr {
@@ -89,3 +100,12 @@ nav ul {
     border: 2px solid;
     position: absolute;
     bottom: -2rem; }
+  .home .logo-elipse {
+    position: absolute;
+    right: 0;
+    top: 11rem;
+    margin-right: 9.5rem; }
+    .home .logo-elipse .letters {
+      position: absolute;
+      left: 0.7rem;
+      margin-top: 0.7rem; }

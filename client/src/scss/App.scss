@@ -1,125 +1,146 @@
 $darkcocoa: #26190c;
 $powderiris: #7d7fab;
 
-
-
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 .left {
-    width: 998px;
-    text-align: right;
-    margin-right: 1rem;
-    float: right;
-    margin-top: 1.2rem;
+  width: 998px;
+  text-align: right;
+  margin-right: 1rem;
+  float: right;
+  margin-top: 1.2rem;
+}
 
-    & span {
-
-    }
+span {
+  font-style: oblique;
+  margin-right: 1rem;
 }
 
 h1 {
-    font-size: 250px;
-    font-family: "Helvetica Neue";
-    font-weight: 200;
-    text-transform: uppercase;
-    color: $darkcocoa;
+  font-size: 250px;
+  font-family: "Helvetica Neue";
+  font-weight: 200;
+  text-transform: uppercase;
+  color: $darkcocoa;
 }
 
 h2 {
-    font-size: 113px;
-    font-family: "Helvetica Neue";
-    font-weight: 200;
-    line-height: 101.4px;
-    letter-spacing: -.5%;
-    text-transform: uppercase;
-    color: $darkcocoa;
-    width: 1104px;
+  font-size: 113px;
+  font-family: "Helvetica Neue";
+  font-weight: 200;
+  line-height: 101.4px;
+  letter-spacing: -0.5%;
+  text-transform: uppercase;
+  color: $darkcocoa;
+  width: 1104px;
 }
 
 h3 {
-    font-size: 24px;
-    font-family: "Helvetica Neue";
-    font-weight: 200;
-    line-height: 24px;
-    letter-spacing: -.5%;
-    text-transform: uppercase;
-    color: $darkcocoa;
+  font-size: 24px;
+  font-family: "Helvetica Neue";
+  font-weight: 200;
+  line-height: 24px;
+  letter-spacing: -0.5%;
+  text-transform: uppercase;
+  color: $darkcocoa;
 }
 
 p {
-    font-size: 24px;
-    font-family: "Helvetica Neue";
-    font-weight: 100;
-    line-height: 24px;
-    letter-spacing: -.5%;
-    text-transform: uppercase;
-    color: $darkcocoa;
+  font-size: 24px;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  line-height: 24px;
+  letter-spacing: -0.5%;
+  text-transform: uppercase;
+  color: $darkcocoa;
 }
 
 li {
-    font-size: 24px;
-    font-family: "Helvetica Neue";
-    font-weight: 200;
-    line-height: 24px;
-    letter-spacing: -.5%;
-    text-transform: uppercase;
-    color: $darkcocoa;
+  font-size: 24px;
+  font-family: "Helvetica Neue";
+  font-weight: 200;
+  line-height: 24px;
+  letter-spacing: -0.5%;
+  text-transform: uppercase;
+  color: $darkcocoa;
+}
+
+a {
+  color: $darkcocoa;
+  text-decoration: none;
+  &:hover {
+    color: $powderiris;
+  }
 }
 
 .nav-link {
-    &:hover {
-        color: $powderiris;
-    }
+  &:hover {
+    cursor: pointer;
+    color: $powderiris;
+  }
 }
 
 nav {
-    & ul {
-        display: flex;
-        list-style: none;
-        justify-content: space-between;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        margin-top: 1rem;
+  & ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
 
-        & img {
-            width: 130px;
-        }
+    & img {
+      width: 130px;
     }
+  }
 }
 
 .home {
-    margin-top: 5rem;
-    h2 {
-        margin-left: 1rem;
-    }
+  margin-top: 5rem;
+  h2 {
+    margin-left: 1rem;
+  }
 
-    .contact-menu {
-        margin-left: 1rem;
-        position: absolute;
-        bottom: 0;
+  .contact-menu {
+    margin-left: 1rem;
+    position: absolute;
+    bottom: 0;
 
-        & ul {
-            list-style: none;
-            margin-bottom: 3rem;
-        }
+    & ul {
+      list-style: none;
+      margin-bottom: 3rem;
     }
+  }
 
-    .color-changer {
-        position: fixed;
-        margin-right: 1rem;
-        margin-bottom: .5rem;
-        bottom: 0;
-        right: 0;
-    }
+  .color-changer {
+    position: fixed;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    bottom: 0;
+    right: 0;
+  }
 
-    & hr {
-        width: 100%;
-        border: 2px solid;
-        position: absolute;
-        bottom: -2rem;
+  & hr {
+    width: 100%;
+    border: 2px solid;
+    position: absolute;
+    bottom: -2rem;
+  }
+
+  & .logo-elipse {
+    position: absolute;
+    right: 0;
+    top: 11rem;
+    margin-right: 9.5rem;
+
+    & .letters {
+      position: absolute;
+      left: 0.7rem;
+      margin-top: 0.7rem;
     }
+  }
 }
