@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+.left {
+  width: 998px;
+  text-align: right;
+  margin-right: 1rem;
+  float: right;
+  margin-top: 1.2rem; }
+
+h1 {
+  font-size: 250px;
+  font-family: "Helvetica Neue";
+  font-weight: 200;
+  text-transform: uppercase;
+  color: #26190c; }
+
+h2 {
+  font-size: 113px;
+  font-family: "Helvetica Neue";
+  font-weight: 200;
+  line-height: 101.4px;
+  letter-spacing: -.5%;
+  text-transform: uppercase;
+  color: #26190c;
+  width: 1104px; }
+
+h3 {
+  font-size: 24px;
+  font-family: "Helvetica Neue";
+  font-weight: 200;
+  line-height: 24px;
+  letter-spacing: -.5%;
+  text-transform: uppercase;
+  color: #26190c; }
+
+p {
+  font-size: 24px;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  line-height: 24px;
+  letter-spacing: -.5%;
+  text-transform: uppercase;
+  color: #26190c; }
+
+li {
+  font-size: 24px;
+  font-family: "Helvetica Neue";
+  font-weight: 200;
+  line-height: 24px;
+  letter-spacing: -.5%;
+  text-transform: uppercase;
+  color: #26190c; }
+
+.nav-link:hover {
+  color: #7d7fab; }
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 1rem; }
+  nav ul img {
+    width: 130px; }
+
+.home {
+  margin-top: 5rem; }
+  .home h2 {
+    margin-left: 1rem; }
+  .home .contact-menu {
+    margin-left: 1rem;
+    position: absolute;
+    bottom: 0; }
+    .home .contact-menu ul {
+      list-style: none;
+      margin-bottom: 3rem; }
+  .home .color-changer {
+    position: fixed;
+    margin-right: 1rem;
+    margin-bottom: .5rem;
+    bottom: 0;
+    right: 0; }
+  .home hr {
+    width: 100%;
+    border: 2px solid;
+    position: absolute;
+    bottom: -2rem; }
