@@ -1,5 +1,6 @@
 $darkcocoa: #26190c;
 $powderiris: #7d7fab;
+$lightcreme: #fbfbf0;
 
 * {
   box-sizing: border-box;
@@ -7,7 +8,14 @@ $powderiris: #7d7fab;
   margin: 0;
 }
 
-.left {
+html,
+body {
+  height: 100%;
+  position: relative;
+  background-color: $lightcreme;
+}
+
+.right {
   width: 998px;
   text-align: right;
   margin-right: 1rem;
@@ -17,7 +25,6 @@ $powderiris: #7d7fab;
 
 span {
   font-style: oblique;
-  margin-right: 1rem;
 }
 
 h1 {
@@ -49,6 +56,15 @@ h3 {
   color: $darkcocoa;
 }
 
+h4 {
+  font-size: 15px;
+  font-family: "Helvetica Neue";
+  font-weight: 200;
+  text-transform: uppercase;
+  color: $darkcocoa;
+  line-height: 15px;
+}
+
 p {
   font-size: 24px;
   font-family: "Helvetica Neue";
@@ -72,16 +88,29 @@ li {
 a {
   color: $darkcocoa;
   text-decoration: none;
+  display: block;
+  transition: color 0.2s ease;
+
   &:hover {
     color: $powderiris;
   }
 }
 
 .nav-link {
+  transition: color 0.2s ease;
+
   &:hover {
     cursor: pointer;
     color: $powderiris;
   }
+}
+
+.color-changer {
+  position: fixed;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  bottom: 0;
+  right: 0;
 }
 
 nav {
@@ -100,47 +129,451 @@ nav {
 }
 
 .home {
-  margin-top: 5rem;
-  h2 {
-    margin-left: 1rem;
+  overflow: hidden;
+
+  & .hero {
+    margin-top: 5rem;
+    height: 100vh;
+    h2 {
+      margin-left: 1rem;
+    }
+
+    .contact-menu {
+      margin-left: 1rem;
+      position: absolute;
+      bottom: 0;
+
+      & ul {
+        list-style: none;
+        margin-bottom: 3rem;
+      }
+    }
+
+    & hr {
+      width: 100%;
+      border: 2px solid;
+      position: absolute;
+      bottom: -2rem;
+    }
+
+    & .logo-elipse {
+      position: absolute;
+      right: 0;
+      top: 11rem;
+      margin-right: 9.5rem;
+
+      & .letters {
+        position: absolute;
+        left: 0.7rem;
+        margin-top: 0.7rem;
+      }
+    }
   }
 
-  .contact-menu {
-    margin-left: 1rem;
+  & .section-1 {
+    & h2 {
+      margin-left: 1rem;
+    }
+    & p {
+      margin-left: 1rem;
+      margin-top: 24rem;
+      width: auto;
+      &.right {
+        margin-top: 9rem;
+      }
+    }
+  }
+
+  & .section-2 {
+    position: relative;
+    top: 24rem;
+    & .header {
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+      & h1 {
+        padding-right: 6rem;
+      }
+    }
+
+    & ul {
+      margin-left: 1rem;
+      list-style: none;
+      margin-top: 13rem;
+
+      & li {
+        line-height: 2.5rem;
+        & span {
+          font-style: normal;
+          top: 2.5rem;
+          position: relative;
+        }
+        & h2 {
+          margin-left: 3rem;
+          transition: color 0.2s ease;
+
+          &:hover {
+            color: $powderiris;
+          }
+        }
+        & img {
+          bottom: 10.32rem;
+          position: relative;
+          left: 52rem;
+
+          &.hover {
+            position: relative;
+            left: 40rem;
+            object-fit: contain;
+            opacity: 0;
+            transition: opacity 0.2s;
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & .ft-images {
+    display: flex;
+    position: relative;
+    top: 30rem;
+    cursor: pointer;
+
+    & .ft-img-1 {
+      margin-left: 11rem;
+      &:hover h4 {
+        visibility: visible;
+        cursor: pointer;
+      }
+    }
+
+    & .ft-img-2 {
+      margin-left: 22rem;
+      margin-top: 15rem;
+      &:hover h4 {
+        visibility: visible;
+        cursor: pointer;
+      }
+    }
+
+    & h4 {
+      text-align: right;
+      visibility: hidden;
+      transition: visibility 0.2s;
+    }
+  }
+
+  & .contact {
+    position: relative;
+    top: 12rem;
+    height: 100vh;
+    margin-top: 32rem;
+    margin-bottom: 8rem;
+
+    h1 {
+      border-bottom: 5px solid $darkcocoa;
+      width: 789px;
+      height: 17rem;
+      margin-left: 4rem;
+
+      &.right {
+        width: 848px;
+        margin-right: 4rem;
+      }
+    }
+  }
+}
+
+.works {
+  & .section-1 {
+    height: 100vh;
+    margin-top: 5rem;
+    margin: auto;
+    width: 50%;
+
+    & ul {
+      margin-left: 1rem;
+      list-style: none;
+      margin: auto;
+      width: 50%;
+      padding-top: 35%;
+
+      & li {
+        line-height: 2.5rem;
+        & span {
+          font-style: normal;
+          top: 2.5rem;
+          position: relative;
+        }
+        & h2 {
+          margin-left: 3rem;
+          transition: color 0.2s ease;
+
+          &:hover {
+            color: $powderiris;
+            font-style: oblique;
+          }
+        }
+      }
+    }
+
+    & .scroll {
+      position: absolute;
+      top: 70%;
+      padding-left: 22%;
+
+      & .elipse {
+        position: absolute;
+        right: 3.68rem;
+        top: 3.58rem;
+      }
+
+      & .letters {
+      }
+    }
+  }
+}
+
+.project {
+  margin-bottom: 10rem;
+  margin-top: 3rem;
+
+  & .container {
+    width: 50%;
     position: absolute;
-    bottom: 0;
+    left: 45rem;
+    padding-top: 17.5rem;
+
+    & p {
+      margin-top: 2rem;
+      margin-bottom: 2.875rem;
+    }
 
     & ul {
       list-style: none;
-      margin-bottom: 3rem;
+      & li {
+        display: flex;
+        margin-bottom: 0.2rem;
+
+        & span {
+          padding-left: 0.5rem;
+        }
+      }
     }
   }
 
-  .color-changer {
-    position: fixed;
-    margin-right: 1rem;
-    margin-bottom: 0.5rem;
-    bottom: 0;
-    right: 0;
+  & .title {
+    margin-left: 1rem;
+    list-style: none;
+    padding-top: 16rem;
+    position: absolute;
+    left: 0;
+    margin-left: 16rem;
+    & span {
+      font-style: normal;
+      top: 2.75rem;
+      position: relative;
+      font-size: 24px;
+      font-family: "Helvetica Neue";
+      font-weight: 200;
+      line-height: 24px;
+      letter-spacing: -0.5%;
+      text-transform: uppercase;
+      color: $darkcocoa;
+    }
+    & h2 {
+      margin-left: 3rem;
+      transition: color 0.2s ease;
+      font-style: oblique;
+
+      &:hover {
+        color: $powderiris;
+        font-style: oblique;
+      }
+    }
   }
 
-  & hr {
-    width: 100%;
-    border: 2px solid;
-    position: absolute;
-    bottom: -2rem;
-  }
+  & .section-2 {
+    width: 96%;
+    margin: auto;
+    margin-bottom: 80rem;
 
-  & .logo-elipse {
-    position: absolute;
-    right: 0;
-    top: 11rem;
-    margin-right: 9.5rem;
+    & .showcase {
+      position: relative;
+      top: 50rem;
 
-    & .letters {
+      & .video-react {
+        margin-bottom: 2rem;
+        background-color: transparent;
+        height: auto;
+        width: 1100px;
+
+        .video-react-control-bar {
+          left: 8.6rem;
+        }
+
+        & video {
+          width: 1100px;
+          left: 12.5%;
+        }
+      }
+      & img {
+        padding-bottom: 2rem;
+      }
+    }
+    & ul {
       position: absolute;
-      left: 0.7rem;
-      margin-top: 0.7rem;
+      top: 430rem;
+      display: flex;
+      list-style: none;
+
+      & li {
+        &:nth-child(n + 1) {
+          position: absolute;
+          left: -1rem;
+        }
+        &:nth-child(n + 2) {
+          position: absolute;
+          left: 71rem;
+        }
+      }
+
+      & h2 {
+        width: min-content;
+      }
     }
+  }
+}
+
+.services {
+  & .section-1 {
+    height: 100vh;
+    width: 73%;
+    margin: auto;
+
+    & h2 {
+      position: absolute;
+      top: 13.125rem;
+      width: fit-content;
+
+      & span {
+        margin-left: 30rem;
+        font-style: normal;
+      }
+    }
+
+    & p {
+      top: 41.3125rem;
+      position: absolute;
+    }
+
+    & hr {
+      width: 100%;
+      border: 2px solid;
+      position: absolute;
+      bottom: -6rem;
+      left: 0;
+    }
+  }
+
+  & .services-info {
+    position: relative;
+    & ul {
+      margin-left: 1rem;
+      list-style: none;
+      margin-top: 2rem;
+
+      & li {
+        & span {
+          line-height: 2.5rem;
+          font-style: normal;
+          top: 2.5rem;
+          position: relative;
+        }
+        & h2 {
+          line-height: 101.4px;
+          top: auto;
+          margin-left: 3rem;
+          transition: color 0.2s ease;
+
+          &:hover {
+            color: $powderiris;
+          }
+        }
+      }
+    }
+
+    & hr {
+      width: 100%;
+      border: 2px solid;
+      position: absolute;
+      bottom: 20.2rem;
+      right: 12.5rem;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+footer {
+  background-color: $lightcreme;
+  width: 100%;
+  margin: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  height: 166px;
+
+  & div {
+    display: flex;
+    margin-bottom: 4rem;
+
+    &.container {
+      position: absolute;
+      right: 21rem;
+      margin-top: 2rem;
+    }
+
+    &.copyright {
+      & h4:nth-child(n + 2) {
+        position: absolute;
+        right: 0;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  & ul {
+    display: block;
+    list-style: none;
+
+    &:nth-child(n + 1) {
+      position: absolute;
+      left: 6rem;
+
+      & .header {
+        position: absolute;
+        right: 10rem;
+      }
+    }
+
+    &:nth-child(n + 2) {
+      position: absolute;
+      left: -24rem;
+      & .header {
+        position: absolute;
+        right: 16rem;
+      }
+    }
+
+    & li {
+      padding-bottom: 0.3rem;
+    }
+  }
+  & img {
+    width: 90px;
+    margin-left: 4rem;
+    margin-top: 1rem;
   }
 }

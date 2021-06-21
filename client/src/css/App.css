@@ -3,7 +3,13 @@
   padding: 0;
   margin: 0; }
 
-.left {
+html,
+body {
+  height: 100%;
+  position: relative;
+  background-color: #fbfbf0; }
+
+.right {
   width: 998px;
   text-align: right;
   margin-right: 1rem;
@@ -11,8 +17,7 @@
   margin-top: 1.2rem; }
 
 span {
-  font-style: oblique;
-  margin-right: 1rem; }
+  font-style: oblique; }
 
 h1 {
   font-size: 250px;
@@ -40,6 +45,14 @@ h3 {
   text-transform: uppercase;
   color: #26190c; }
 
+h4 {
+  font-size: 15px;
+  font-family: "Helvetica Neue";
+  font-weight: 200;
+  text-transform: uppercase;
+  color: #26190c;
+  line-height: 15px; }
+
 p {
   font-size: 24px;
   font-family: "Helvetica Neue";
@@ -60,13 +73,24 @@ li {
 
 a {
   color: #26190c;
-  text-decoration: none; }
+  text-decoration: none;
+  display: block;
+  transition: color 0.2s ease; }
   a:hover {
     color: #7d7fab; }
 
-.nav-link:hover {
-  cursor: pointer;
-  color: #7d7fab; }
+.nav-link {
+  transition: color 0.2s ease; }
+  .nav-link:hover {
+    cursor: pointer;
+    color: #7d7fab; }
+
+.color-changer {
+  position: fixed;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  bottom: 0;
+  right: 0; }
 
 nav ul {
   display: flex;
@@ -79,33 +103,303 @@ nav ul {
     width: 130px; }
 
 .home {
-  margin-top: 5rem; }
-  .home h2 {
+  overflow: hidden; }
+  .home .hero {
+    margin-top: 5rem;
+    height: 100vh; }
+    .home .hero h2 {
+      margin-left: 1rem; }
+    .home .hero .contact-menu {
+      margin-left: 1rem;
+      position: absolute;
+      bottom: 0; }
+      .home .hero .contact-menu ul {
+        list-style: none;
+        margin-bottom: 3rem; }
+    .home .hero hr {
+      width: 100%;
+      border: 2px solid;
+      position: absolute;
+      bottom: -2rem; }
+    .home .hero .logo-elipse {
+      position: absolute;
+      right: 0;
+      top: 11rem;
+      margin-right: 9.5rem; }
+      .home .hero .logo-elipse .letters {
+        position: absolute;
+        left: 0.7rem;
+        margin-top: 0.7rem; }
+  .home .section-1 h2 {
     margin-left: 1rem; }
-  .home .contact-menu {
+  .home .section-1 p {
     margin-left: 1rem;
-    position: absolute;
-    bottom: 0; }
-    .home .contact-menu ul {
+    margin-top: 24rem;
+    width: auto; }
+    .home .section-1 p.right {
+      margin-top: 9rem; }
+  .home .section-2 {
+    position: relative;
+    top: 24rem; }
+    .home .section-2 .header {
+      display: flex;
+      justify-content: center;
+      overflow: hidden; }
+      .home .section-2 .header h1 {
+        padding-right: 6rem; }
+    .home .section-2 ul {
+      margin-left: 1rem;
       list-style: none;
-      margin-bottom: 3rem; }
-  .home .color-changer {
-    position: fixed;
-    margin-right: 1rem;
-    margin-bottom: 0.5rem;
-    bottom: 0;
-    right: 0; }
-  .home hr {
+      margin-top: 13rem; }
+      .home .section-2 ul li {
+        line-height: 2.5rem; }
+        .home .section-2 ul li span {
+          font-style: normal;
+          top: 2.5rem;
+          position: relative; }
+        .home .section-2 ul li h2 {
+          margin-left: 3rem;
+          transition: color 0.2s ease; }
+          .home .section-2 ul li h2:hover {
+            color: #7d7fab; }
+        .home .section-2 ul li img {
+          bottom: 10.32rem;
+          position: relative;
+          left: 52rem; }
+          .home .section-2 ul li img.hover {
+            position: relative;
+            left: 40rem;
+            object-fit: contain;
+            opacity: 0;
+            transition: opacity 0.2s; }
+            .home .section-2 ul li img.hover:hover {
+              opacity: 1; }
+  .home .ft-images {
+    display: flex;
+    position: relative;
+    top: 30rem;
+    cursor: pointer; }
+    .home .ft-images .ft-img-1 {
+      margin-left: 11rem; }
+      .home .ft-images .ft-img-1:hover h4 {
+        visibility: visible;
+        cursor: pointer; }
+    .home .ft-images .ft-img-2 {
+      margin-left: 22rem;
+      margin-top: 15rem; }
+      .home .ft-images .ft-img-2:hover h4 {
+        visibility: visible;
+        cursor: pointer; }
+    .home .ft-images h4 {
+      text-align: right;
+      visibility: hidden;
+      transition: visibility 0.2s; }
+  .home .contact {
+    position: relative;
+    top: 12rem;
+    height: 100vh;
+    margin-top: 32rem;
+    margin-bottom: 8rem; }
+    .home .contact h1 {
+      border-bottom: 5px solid #26190c;
+      width: 789px;
+      height: 17rem;
+      margin-left: 4rem; }
+      .home .contact h1.right {
+        width: 848px;
+        margin-right: 4rem; }
+
+.works .section-1 {
+  height: 100vh;
+  margin-top: 5rem;
+  margin: auto;
+  width: 50%; }
+  .works .section-1 ul {
+    margin-left: 1rem;
+    list-style: none;
+    margin: auto;
+    width: 50%;
+    padding-top: 35%; }
+    .works .section-1 ul li {
+      line-height: 2.5rem; }
+      .works .section-1 ul li span {
+        font-style: normal;
+        top: 2.5rem;
+        position: relative; }
+      .works .section-1 ul li h2 {
+        margin-left: 3rem;
+        transition: color 0.2s ease; }
+        .works .section-1 ul li h2:hover {
+          color: #7d7fab;
+          font-style: oblique; }
+  .works .section-1 .scroll {
+    position: absolute;
+    top: 70%;
+    padding-left: 22%; }
+    .works .section-1 .scroll .elipse {
+      position: absolute;
+      right: 3.68rem;
+      top: 3.58rem; }
+
+.project {
+  margin-bottom: 10rem;
+  margin-top: 3rem; }
+  .project .container {
+    width: 50%;
+    position: absolute;
+    left: 45rem;
+    padding-top: 17.5rem; }
+    .project .container p {
+      margin-top: 2rem;
+      margin-bottom: 2.875rem; }
+    .project .container ul {
+      list-style: none; }
+      .project .container ul li {
+        display: flex;
+        margin-bottom: 0.2rem; }
+        .project .container ul li span {
+          padding-left: 0.5rem; }
+  .project .title {
+    margin-left: 1rem;
+    list-style: none;
+    padding-top: 16rem;
+    position: absolute;
+    left: 0;
+    margin-left: 16rem; }
+    .project .title span {
+      font-style: normal;
+      top: 2.75rem;
+      position: relative;
+      font-size: 24px;
+      font-family: "Helvetica Neue";
+      font-weight: 200;
+      line-height: 24px;
+      letter-spacing: -0.5%;
+      text-transform: uppercase;
+      color: #26190c; }
+    .project .title h2 {
+      margin-left: 3rem;
+      transition: color 0.2s ease;
+      font-style: oblique; }
+      .project .title h2:hover {
+        color: #7d7fab;
+        font-style: oblique; }
+  .project .section-2 {
+    width: 96%;
+    margin: auto;
+    margin-bottom: 80rem; }
+    .project .section-2 .showcase {
+      position: relative;
+      top: 50rem; }
+      .project .section-2 .showcase .video-react {
+        margin-bottom: 2rem;
+        background-color: transparent;
+        height: auto;
+        width: 1100px; }
+        .project .section-2 .showcase .video-react .video-react-control-bar {
+          left: 8.6rem; }
+        .project .section-2 .showcase .video-react video {
+          width: 1100px;
+          left: 12.5%; }
+      .project .section-2 .showcase img {
+        padding-bottom: 2rem; }
+    .project .section-2 ul {
+      position: absolute;
+      top: 430rem;
+      display: flex;
+      list-style: none; }
+      .project .section-2 ul li:nth-child(n + 1) {
+        position: absolute;
+        left: -1rem; }
+      .project .section-2 ul li:nth-child(n + 2) {
+        position: absolute;
+        left: 71rem; }
+      .project .section-2 ul h2 {
+        width: min-content; }
+
+.services .section-1 {
+  height: 100vh;
+  width: 73%;
+  margin: auto; }
+  .services .section-1 h2 {
+    position: absolute;
+    top: 13.125rem;
+    width: fit-content; }
+    .services .section-1 h2 span {
+      margin-left: 30rem;
+      font-style: normal; }
+  .services .section-1 p {
+    top: 41.3125rem;
+    position: absolute; }
+  .services .section-1 hr {
     width: 100%;
     border: 2px solid;
     position: absolute;
-    bottom: -2rem; }
-  .home .logo-elipse {
+    bottom: -6rem;
+    left: 0; }
+
+.services .services-info {
+  position: relative; }
+  .services .services-info ul {
+    margin-left: 1rem;
+    list-style: none;
+    margin-top: 2rem; }
+    .services .services-info ul li span {
+      line-height: 2.5rem;
+      font-style: normal;
+      top: 2.5rem;
+      position: relative; }
+    .services .services-info ul li h2 {
+      line-height: 101.4px;
+      top: auto;
+      margin-left: 3rem;
+      transition: color 0.2s ease; }
+      .services .services-info ul li h2:hover {
+        color: #7d7fab; }
+  .services .services-info hr {
+    width: 100%;
+    border: 2px solid;
     position: absolute;
-    right: 0;
-    top: 11rem;
-    margin-right: 9.5rem; }
-    .home .logo-elipse .letters {
+    bottom: 20.2rem;
+    right: 12.5rem;
+    transform: rotate(90deg); }
+
+footer {
+  background-color: #fbfbf0;
+  width: 100%;
+  margin: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  height: 166px; }
+  footer div {
+    display: flex;
+    margin-bottom: 4rem; }
+    footer div.container {
       position: absolute;
-      left: 0.7rem;
-      margin-top: 0.7rem; }
+      right: 21rem;
+      margin-top: 2rem; }
+    footer div.copyright h4:nth-child(n + 2) {
+      position: absolute;
+      right: 0;
+      margin-right: 0.5rem; }
+  footer ul {
+    display: block;
+    list-style: none; }
+    footer ul:nth-child(n + 1) {
+      position: absolute;
+      left: 6rem; }
+      footer ul:nth-child(n + 1) .header {
+        position: absolute;
+        right: 10rem; }
+    footer ul:nth-child(n + 2) {
+      position: absolute;
+      left: -24rem; }
+      footer ul:nth-child(n + 2) .header {
+        position: absolute;
+        right: 16rem; }
+    footer ul li {
+      padding-bottom: 0.3rem; }
+  footer img {
+    width: 90px;
+    margin-left: 4rem;
+    margin-top: 1rem; }
