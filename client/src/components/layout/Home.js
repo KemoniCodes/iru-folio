@@ -1,93 +1,63 @@
-import React from "react";
-import Mailto from "../utils/MailTo";
+import React, { Fragment, useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Services from "../sections/Services";
-import ColorChanger from "../../images/COLOR CHANGER.png";
-import Elipse from "../../images/Ellipse 1.png";
-import Featured1 from "../../images/featured-1.png";
-import Featured2 from "../../images/featured-2.png";
-import Letters from "../../images/LETTERS.png";
+import FeaturedImgs from "../sections/Home/FeaturedImgs";
+import Services from "../sections/Services/Services";
+import Contact from "../sections/Contact";
+import Footer from "../layout/Footer";
+import Navbar from "./Navbar";
+import useLocoScroll from "../../actions/useLocoScroll";
+import gsap from "gsap";
+import SplitText from "../utils/Split3.min.js";
+import Hero from "../sections/Home/Hero";
+import About from "../sections/Home/About";
 
 const Home = () => {
+  const [preLoader, setPreloader] = useState(true);
+
+  useLocoScroll(!preLoader);
+
+  const [timer, setTimer] = useState(1);
+
+  const id = useRef(null);
+
+  const clear = () => {
+    window.clearInterval(id.current);
+    setPreloader(false);
+  };
+
+  useEffect(() => {
+    id.current = window.setInterval(() => {
+      setTimer((timer) => timer - 1);
+    }, 1000);
+  }, []);
+
+  useEffect(() => {
+    if (timer === 0) {
+      clear();
+    }
+  }, [timer]);
+
   return (
-    <div className='home'>
-      <div className='hero'>
-        <h2>
-          KEMONI IS A BRAND DESIGNER BASED IN <br /> LA.
-        </h2>
-        <h2 className='right'>
-          CURATING <br /> AESTHETICS FOR <br />
-          <span>MODERN</span> BRANDS.
-        </h2>
-
-        <div className='logo-elipse'>
-          <img className='elipse' src={Elipse} alt='Dark Mode Button' />
-          <img className='letters' src={Letters} alt='Dark Mode Button' />
+    <Fragment>
+      {preLoader ? (
+        <div className='loader-wrapper'>
+          <div className='biglogo'>
+            <h1 className='left'>Iru</h1>
+            <hr />
+            <h1 className='right'>Studios</h1>
+          </div>
         </div>
-
-        <div className='contact-menu'>
-          <ul>
-            <li>
-              <Mailto
-                email='hello@irustudios.com'
-                obfuscate={true}
-                subject="Re: Let's work together!"
-              >
-                email
-              </Mailto>
-            </li>
-            <li>
-              <Link to='https://www.behance.net/kemoniwilliams1'>behance</Link>
-            </li>
-            <li>
-              <Link to='https://www.instagram.com/irustudios/'>instagram</Link>
-            </li>
-          </ul>
+      ) : (
+        <div className='home' id='main-container' data-scroll-container>
+          <Hero />
+          <About />
+          <Services />
+          <FeaturedImgs />
+           <Contact />
+          <Footer />   
         </div>
-
-        <img
-          className='color-changer'
-          src={ColorChanger}
-          alt='Dark Mode Button'
-        />
-
-        <hr />
-      </div>
-
-      <div className='section-1'>
-        <h2>
-          adding a tinge of <br />
-          <span>twang</span> to minimal <br /> design.
-        </h2>
-        <p className='right'>
-          Adhering to a clean and aesthetic <br /> design style provides a sense
-          of ease <br /> and usability to users. Inciting <br /> confidence in
-          people’s first impression <br /> of your brand.
-        </p>
-        <p>
-          REMOVING unessential design elements <br /> allows the focus to be on
-          the most <br /> impactful aspects of your brand.
-        </p>
-      </div>
-
-      <Services />
-
-      <div className='ft-images'>
-        <div className='ft-img-1'>
-          <img src={Featured1} alt='Featured Project 1' />
-          <h4>branding</h4>
-        </div>
-        <div className='ft-img-2'>
-          <img src={Featured2} alt='Featured Project 2' />
-          <h4>web/mobile design</h4>
-        </div>
-      </div>
-
-      <div className='contact'>
-        <h1>get in</h1>
-        <h1 className='right'>touch</h1>
-      </div>
-    </div>
+      )}
+    </Fragment>
   );
 };
 

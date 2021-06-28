@@ -1,15 +1,40 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useRef, Link } from "react";
+import gsap from "gsap";
 import Mailto from "../utils/MailTo";
-import Submark from "../../images/SUBMARK.png";
+import Elipse from "../../images/Ellipse 1.png";
+import Letters from "../../images/LETTERS.png";
 
 const Footer = () => {
-  return (
-    <footer>
-      <div>
-        <img src={Submark} alt='Submark logo' />
+  const letters = useRef(null);
 
-        <div className='container'>
+  useEffect(() => {
+    gsap.to(letters.current, 5, {
+      rotation: "+=360",
+      ease: "none",
+      repeat: -1,
+    });
+
+    gsap.from(".logo-elipse", {
+      duration: 1.1,
+      y: 80,
+      opacity: 1,
+      stagger: 0.1,
+      ease: "power2",
+    });
+  }, []);
+  return (
+    <footer data-scroll-section>
+      <div>
+        <div className='logo-elipse submark'>
+          <img className='elipse' src={Elipse} alt='Dark Mode Button' />
+          <img
+            className='letters'
+            src={Letters}
+            alt='Dark Mode Button'
+            ref={letters}
+          />
+        </div>
+        <div className='footer-container'>
           <ul>
             <li className='header'>
               <h3>socials</h3>
@@ -27,16 +52,23 @@ const Footer = () => {
             </li>
             <li>
               <h4>
-                <Link to='https://www.behance.net/kemoniwilliams1'>
+                <a href='https://www.behance.net/kemoniwilliams1' target='#'>
                   behance
-                </Link>
+                </a>
               </h4>
             </li>
             <li>
               <h4>
-                <Link to='https://www.instagram.com/irustudios/'>
+                <a href='https://www.instagram.com/irustudios/' target='#'>
                   instagram
-                </Link>
+                </a>
+              </h4>
+            </li>
+            <li>
+              <h4>
+                <a href='https://github.com/KemoniCodes' target='#'>
+                  github
+                </a>
               </h4>
             </li>
           </ul>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
 import { Player, BigPlayButton } from "video-react";
 import Arrow from "../../images/Arrow-small.png";
 import Img1 from "../../images/project1.mp4";
@@ -6,15 +6,38 @@ import Img2 from "../../images/project2.png";
 import Img3 from "../../images/project3.png";
 import { Link } from "react-router-dom";
 import "video-react/dist/video-react.css";
+import Footer from "../layout/Footer";
+
+import ScrollTrigger from "gsap/ScrollTrigger";
+import gsap from "gsap";
+
 
 const Project = () => {
+
+  const fav = useRef(null);
+
+  useEffect(() => {
+    const anim = gsap.fromTo(
+      fav.current,
+      { autoAlpha: 0, y: 100 },
+      { duration: 1, autoAlpha: 1, y: 0 }
+    );
+    ScrollTrigger.create({
+      trigger: fav.current,
+      animation: anim,
+      toggleActions: "play none none none",
+      once: true,
+    });
+  }, [ScrollTrigger]);
+
+  console.log(fav)
   return (
-    <div className='project'>
-      <div className='title'>
+    <div className='project' data-scroll-section>
+      <div className='title' data-scroll ref={fav}>
         <span>.01</span>
         <h2>SERÁ</h2>
       </div>
-      <div className='container'>
+      <div className='container' data-scroll ref={fav}>
         <h3>
           BRanding/web design/
           <br /> development/ecommerce
@@ -47,9 +70,9 @@ const Project = () => {
         </ul>
       </div>
 
-      <div className='section-2'>
-        <div className='showcase'>
-          <Player autoPlay="true">
+      <div className='section-2' ref={fav}>
+        <div className='showcase' >
+          <Player autoPlay='true' >
             <source src={Img1} />
             <BigPlayButton position='center' />
           </Player>
@@ -66,6 +89,7 @@ const Project = () => {
           </li>
         </ul> */}
       </div>
+      <Footer />
     </div>
   );
 };
