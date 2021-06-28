@@ -2083,69 +2083,20 @@ footer {
   }
 
   .services {
-    & .section-1 {
-      width: 96%;
-      height: 150vh;
-
-      & h2 {
-        &#service-title {
-          font-size: 59px;
-          line-height: 53px;
-          width: 348px;
-          margin-top: -4rem;
-
-          & span {
-            left: -23rem;
-            position: relative;
-          }
-        }
-      }
-
-      & hr {
-        bottom: -8rem;
-      }
-
-      & p {
-        &#service-p {
-          top: 28.3125rem;
-          position: absolute;
-
-          & div:nth-child(6) {
-            margin-top: 1rem;
-          }
-        }
-      }
-    }
-
     & .services-info {
-      position: relative;
-      top: -17rem;
-
-      & ul {
-        margin-left: 0;
-        & h2 {
-          font-size: 59px;
-          line-height: 53px;
-          width: 239px;
-        }
-      }
-
-      & hr {
-        display: none;
-      }
+      top: -14rem;
     }
   }
-
   .info {
     position: absolute;
     left: 0;
-    top: 90rem;
+    top: 104rem;
     margin-top: 5.6rem;
 
     & .services-info {
       background-color: $darkcocoa;
       padding-left: 4rem;
-      width: 25.87rem;
+      width: 26.3rem;
 
       & span {
         color: $lightcreme;
@@ -2193,9 +2144,24 @@ footer {
       }
     }
   }
+
+  .contact {
+    top: 45rem;
+    height: 32vh;
+  }
+
+  footer {
+    position: relative;
+    top: 42rem;
+    & div.footer-container {
+      position: relative;
+      right: 23.5rem;
+      top: 2rem;
+    }
+  }
 }
 
-@media only screen and (min-width: 414px) and (max-width: 414px) and (min-height: 896px) and (max-height: 896px) {
+@media only screen and (min-width: 414px) and (max-width: 414px) {
   .services {
     & .services-info {
       top: -14rem;
