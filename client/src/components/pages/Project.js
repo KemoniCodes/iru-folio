@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from "react";
+import React, { useEffect, useRef } from "react";
 import { Player, BigPlayButton } from "video-react";
 import Arrow from "../../images/Arrow-small.png";
 import Img1 from "../../images/project1.mp4";
@@ -11,9 +11,7 @@ import Footer from "../layout/Footer";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import gsap from "gsap";
 
-
 const Project = () => {
-
   const fav = useRef(null);
 
   useEffect(() => {
@@ -30,7 +28,7 @@ const Project = () => {
     });
   }, [ScrollTrigger]);
 
-  console.log(fav)
+  console.log(fav);
   return (
     <div className='project' data-scroll-section>
       <div className='title' data-scroll ref={fav}>
@@ -67,12 +65,18 @@ const Project = () => {
               <img src={Arrow} alt='arrow' />
             </span>
           </li>
+          <li>
+            <Link to='https://github.com/KemoniCodes/sera-theme'>code</Link>
+            <span>
+              <img src={Arrow} alt='arrow' />
+            </span>
+          </li>
         </ul>
       </div>
 
       <div className='section-2' ref={fav}>
-        <div className='showcase' >
-          <Player autoPlay='true' >
+        <div className='showcase'>
+          <Player autoPlay='true'>
             <source src={Img1} />
             <BigPlayButton position='center' />
           </Player>

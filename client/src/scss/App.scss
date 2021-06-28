@@ -571,10 +571,12 @@ nav {
     width: 96%;
     margin: auto;
     margin-bottom: 80rem;
+    top: 44rem;
+    position: relative;
 
     & .showcase {
       position: relative;
-      top: 50rem;
+      top: 20rem;
 
       & .video-react {
         margin-bottom: 2rem;
@@ -1097,6 +1099,19 @@ footer {
         &#right {
           width: 273px;
           margin-bottom: 4rem;
+        }
+      }
+    }
+
+    & .section-2 {
+      & .headers {
+        font-size: 6rem;
+      }
+      & .services-menu {
+        & h2 {
+          font-size: 59px;
+          line-height: 53px;
+          width: min-content;
         }
       }
     }

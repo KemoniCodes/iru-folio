@@ -409,10 +409,12 @@ nav {
   .project .section-2 {
     width: 96%;
     margin: auto;
-    margin-bottom: 80rem; }
+    margin-bottom: 80rem;
+    top: 44rem;
+    position: relative; }
     .project .section-2 .showcase {
       position: relative;
-      top: 50rem; }
+      top: 20rem; }
       .project .section-2 .showcase .video-react {
         margin-bottom: 2rem;
         background-color: transparent;
@@ -756,6 +758,12 @@ footer {
       .home #section-1 p#right {
         width: 273px;
         margin-bottom: 4rem; }
+  .home .section-2 .headers {
+    font-size: 6rem; }
+  .home .section-2 .services-menu h2 {
+    font-size: 59px;
+    line-height: 53px;
+    width: min-content; }
   .home .ft-images .ft-img-1 {
     margin-left: 1.6rem; }
   .home .ft-images .ft-img-2 {
