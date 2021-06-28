@@ -2195,6 +2195,86 @@ footer {
   }
 }
 
+@media only screen and (min-width: 414px) and (max-width: 414px) and (min-height: 896px) and (max-height: 896px) {
+  .services {
+    & .services-info {
+      top: -14rem;
+    }
+  }
+  .info {
+    position: absolute;
+    left: 0;
+    top: 104rem;
+    margin-top: 5.6rem;
+
+    & .services-info {
+      background-color: $darkcocoa;
+      padding-left: 4rem;
+      width: 26.3rem;
+
+      & span {
+        color: $lightcreme;
+        display: none;
+      }
+      & .title {
+        & h2 {
+          font-size: 50px;
+          line-height: 53px;
+          width: 239px;
+          color: $lightcreme;
+          margin-left: 1.2rem;
+          padding-top: 1rem;
+        }
+      }
+
+      & h3 {
+        color: $lightcreme;
+        left: -3rem;
+        position: relative;
+      }
+
+      & .deliverable {
+        position: relative;
+        left: -3rem;
+        & li {
+          color: $lightcreme;
+          width: 16rem;
+        }
+      }
+
+      & p {
+        color: $lightcreme;
+        width: 8rem;
+
+        &.desc {
+          left: -3rem;
+          position: relative;
+          width: 22rem;
+        }
+        &.margin {
+          width: 12rem;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .contact {
+    top: 45rem;
+    height: 32vh;
+  }
+
+  footer {
+    position: relative;
+    top: 42rem;
+    & div.footer-container {
+      position: relative;
+      right: 23.5rem;
+      top: 2rem;
+    }
+  }
+}
+
 // IPADS
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   nav {
