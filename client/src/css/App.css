@@ -701,6 +701,39 @@ footer {
     footer img.letters {
       position: absolute; }
 
+.instagram {
+  background-color: #26190c;
+  height: 183vh;
+  overflow: hidden; }
+  .instagram img.header-img {
+    width: 100vw;
+    position: absolute;
+    top: -1rem;
+    height: 450px;
+    object-fit: cover;
+    object-position: 80% 35%; }
+  .instagram img.letters {
+    position: absolute;
+    left: 0.8rem;
+    top: 0.7rem; }
+  .instagram .logo-elipse {
+    position: relative;
+    top: 36rem;
+    left: 73rem; }
+  .instagram ul {
+    position: relative;
+    top: 20rem;
+    padding-left: 4rem; }
+    .instagram ul h2 {
+      color: #fbfbf0;
+      text-decoration: underline;
+      text-decoration-thickness: 5px;
+      padding-bottom: 3rem;
+      line-height: 7.4rem; }
+      .instagram ul h2:hover {
+        font-style: oblique;
+        color: #7d7fab; }
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 414px) {
   .color-changer {
     bottom: 0; }

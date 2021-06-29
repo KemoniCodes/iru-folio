@@ -1004,6 +1004,54 @@ footer {
   }
 }
 
+.instagram {
+  background-color: $darkcocoa;
+  height: 183vh;
+  overflow: hidden;
+
+  & img {
+    &.header-img {
+      width: 100vw;
+      position: absolute;
+      top: -1rem;
+      height: 450px;
+      object-fit: cover;
+      object-position: 80% 35%;
+    }
+
+    &.letters {
+      position: absolute;
+      left: 0.8rem;
+      top: 0.7rem;
+    }
+  }
+
+  & .logo-elipse {
+    position: relative;
+    top: 36rem;
+    left: 73rem;
+  }
+
+  & ul {
+    position: relative;
+    top: 20rem;
+    padding-left: 4rem;
+
+    & h2 {
+      color: $lightcreme;
+      text-decoration: underline;
+      text-decoration-thickness: 5px;
+      padding-bottom: 3rem;
+      line-height: 7.4rem;
+
+      &:hover {
+        font-style: oblique;
+        color: $powderiris;
+      }
+    }
+  }
+}
+
 //Responsiveness
 
 // IPHONE 5/SE

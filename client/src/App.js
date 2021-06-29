@@ -10,6 +10,7 @@ import ServicesInfo from "./components/sections/Services/ServicesInfo";
 import service from "./components/pages/Services";
 import About from "./components/pages/About";
 import Contact from "./components/pages/Contact";
+import Instagram from "./components/pages/Instagram";
 
 import "./scss/App.scss";
 //Redux
@@ -27,6 +28,7 @@ const App = () => (
           <Route path='/works' component={Works} />
           <Route exact path='/about-us' component={About} />
           <Route exact path='/contact' component={Contact} />
+          <Route exact path='/links' component={Instagram} />
 
           <Route path='/services'>
             <Services />
