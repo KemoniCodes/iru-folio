@@ -3,6 +3,7 @@ import gsap from "gsap";
 import Mailto from "../utils/MailTo";
 import Elipse from "../../images/Ellipse 1.png";
 import Letters from "../../images/LETTERS.png";
+import Resume from "../../images/Resume21.pdf";
 
 const Footer = () => {
   const letters = useRef(null);
@@ -68,6 +69,13 @@ const Footer = () => {
               <h4>
                 <a href='https://github.com/KemoniCodes' target='#'>
                   github
+                </a>
+              </h4>
+            </li>
+            <li>
+              <h4>
+                <a href={Resume} target='#'>
+                  resume
                 </a>
               </h4>
             </li>
