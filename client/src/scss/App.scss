@@ -1667,6 +1667,29 @@ footer {
       }
     }
   }
+
+  .instagram {
+    & ul {
+      padding-left: 1.5rem;
+      top: 19rem;
+
+      & li {
+        & h2 {
+          font-size: 50px;
+          line-height: 53px;
+          width: auto;
+          padding-bottom: 1.5rem;
+          text-decoration-thickness:3px;
+        }
+      }
+    }
+
+    & .logo-elipse {
+      position: relative;
+      top: 21rem;
+      left: 15rem;
+    }
+  }
 }
 
 // MOTO G4, GALAXY S5

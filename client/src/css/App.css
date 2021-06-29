@@ -1108,7 +1108,20 @@ footer {
     height: 27px;
     right: -6rem;
     position: relative;
-    top: 10rem; } }
+    top: 10rem; }
+  .instagram ul {
+    padding-left: 1.5rem;
+    top: 19rem; }
+    .instagram ul li h2 {
+      font-size: 50px;
+      line-height: 53px;
+      width: auto;
+      padding-bottom: 1.5rem;
+      text-decoration-thickness: 3px; }
+  .instagram .logo-elipse {
+    position: relative;
+    top: 21rem;
+    left: 15rem; } }
 
 @media only screen and (min-width: 360px) and (max-width: 360px) {
   nav ul {
