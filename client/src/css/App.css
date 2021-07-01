@@ -374,6 +374,9 @@ nav {
     .project .container p {
       margin-top: 2rem;
       margin-bottom: 2.875rem; }
+      .project .container p span {
+        font-style: "oblique";
+        font-weight: 300; }
     .project .container ul {
       list-style: none; }
       .project .container ul li {

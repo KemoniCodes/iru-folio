@@ -521,6 +521,11 @@ nav {
     & p {
       margin-top: 2rem;
       margin-bottom: 2.875rem;
+
+      & span {
+        font-style: "oblique";
+        font-weight: 300;
+      }
     }
 
     & ul {
@@ -1679,7 +1684,7 @@ footer {
           line-height: 53px;
           width: auto;
           padding-bottom: 1.5rem;
-          text-decoration-thickness:3px;
+          text-decoration-thickness: 3px;
         }
       }
     }

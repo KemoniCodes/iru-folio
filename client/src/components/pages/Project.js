@@ -47,6 +47,8 @@ const Project = () => {
           <br /> fine jewelry atelier. They were founded in Los <br /> Angeles,
           California, bred to be worn to <br /> capture still moments. To remind
           us to just be.
+          <br />
+          <br /> <span>Password: sera</span>
         </p>
         <ul>
           <li>

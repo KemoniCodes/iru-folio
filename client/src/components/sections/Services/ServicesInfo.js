@@ -19,9 +19,8 @@ const ServicesInfo = ({
   ) : (
     <Fragment>
       <Services />
-  
+
       <div className='info'>
-        
         <div className='services-info'>
           <div className='title'>
             <span>{service.number}</span>
@@ -55,9 +54,7 @@ const ServicesInfo = ({
             )}
           </ul>
         </div>
-        )}
       </div>
- 
     </Fragment>
   );
 };
